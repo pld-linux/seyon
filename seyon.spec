@@ -6,7 +6,7 @@ License:	GPL v2
 Group:		Applications/Communications
 Source0:	ftp://ibiblio.org/pub/Linux/apps/serialcomm/dialout/%{name}-%{version}.tar.gz
 # Source0-md5:	82ab5470a93ef591fe4c3b2b40f91469
-Patch0:		%{name}-dec.patch
+#Patch0:		%{name}-dec.patch
 Patch1:		%{name}-config.patch
 Patch2:		%{name}-debian.patch
 BuildRequires:	XFree86-devel
@@ -17,7 +17,7 @@ A complete full-featured telecommunications package for the X Window System.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 %patch1 -p1
 %patch2 -p1
 chmod u+x makever.sh
