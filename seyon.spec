@@ -8,6 +8,7 @@ Source0:	ftp://ibiblio.org/pub/Linux/apps/serialcomm/dialout/%{name}-%{version}.
 # Source0-md5:	82ab5470a93ef591fe4c3b2b40f91469
 Patch0:		%{name}-dec.patch
 Patch1:		%{name}-config.patch
+Patch2:		%{name}-debian.patch
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -18,6 +19,7 @@ A complete full-featured telecommunications package for the X Window System.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 chmod u+x makever.sh
 
 %build
@@ -46,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc 1-*
+%doc 1-* startup
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_prefix}/X11R6/lib/X11/app-defaults/*
