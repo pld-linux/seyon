@@ -1,0 +1,12 @@
+diff -urN seyon-2.20c.org/config.h seyon-2.20c/config.h
+--- seyon-2.20c.org/config.h	2003-08-03 21:28:41.000000000 +0200
++++ seyon-2.20c/config.h	2003-08-03 21:53:58.000000000 +0200
+@@ -89,6 +89,8 @@
+ #define HAVE_STRSTR         YES
+ #define HAVE_STRERROR       YES
+ #define HAVE_USLEEP         YES
++#define LF_PATH             "/var/lock"
++#define LF_PREFIX           "LCK.."
+ #endif
+ 
+ #ifdef SVR4
