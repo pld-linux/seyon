@@ -1,4 +1,5 @@
 Summary:	A complete full-featured telecommunications package for X11
+Summary(pl):	W pe³ni funkcjonalny pakiet telekomunikacyjny dla X11
 Name:		seyon
 Version:	2.20c
 Release:	1
@@ -13,7 +14,11 @@ BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A complete full-featured telecommunications package for the X Window System.
+A complete full-featured telecommunications package for the X Window
+System.
+
+%description -l pl
+W pe³ni funkcjonalny pakiet telekomunikacyjny dla Systemu X Window.
 
 %prep
 %setup -q
