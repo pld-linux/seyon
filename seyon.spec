@@ -13,7 +13,7 @@ Patch2:		%{name}-debian.patch
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		addir	/usr/X11R6/lib/X11/app-defaults
+%define		_appdefsdir	/usr/X11R6/lib/X11/app-defaults
 
 %description
 A complete full-featured telecommunications package for the X Window
@@ -59,5 +59,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc 1-* startup
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{addir}/*
+%{_appdefsdir}/*
 %{_mandir}/man?/*
