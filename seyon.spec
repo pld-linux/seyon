@@ -29,7 +29,7 @@ rm -f doc/*.old
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
+install -d $RPM_BUILD_ROOT{%{_datadir}/%{name},%{_mandir}/man1}
 
 %{__make} install \
 	DESTDIR="$RPM_BUILD_ROOT" \
@@ -37,6 +37,7 @@ install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 install %{name}.help $RPM_BUILD_ROOT%{_datadir}/%{name}/%{name}.help
 ln -s %{_prefix}/X11R6/bin/xterm $RPM_BUILD_ROOT%{_bindir}/seyon-emu
+install %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,3 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_prefix}/X11R6/lib/X11/app-defaults/*
+%{_mandir}/man?/*
